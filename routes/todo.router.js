@@ -1,5 +1,5 @@
 import { Router } from "express";
-import { createTodo } from "../controllers/todo.controller.js";
+import { createTodo, getAllTodos } from "../controllers/todo.controller.js";
 
 const router = Router()
 
@@ -11,7 +11,7 @@ const router = Router()
  * DELETE /todos/4 => deleteTodo
  */
 
-// router.get('/todos', getAllTodos)
+router.get('/todos', getAllTodos)
 // router.get('/todos/:id', getTodo)
 router.post('/todos', createTodo)
 // router.put('/todos/:id', updateTodo)
