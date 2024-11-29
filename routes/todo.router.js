@@ -7,14 +7,6 @@ import { validate } from "../middleware/validate.middleware.js";
 const router = Router();
 router.use(authenticateToken);
 
-/**
- * GET /todos => getAllTodos
- * GET /todos/4 => getTodo
- * POST /todos => createTodo
- * PUT /todos/4 => updateTodo
- * DELETE /todos/4 => deleteTodo
- */
-
 router.get('/todos', getAllTodos)
 router.get('/todos/:id', getTodo)
 router.post('/todos', todoValidatorRules(), validate, createTodo)
